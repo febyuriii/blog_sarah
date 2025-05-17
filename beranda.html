@@ -2,133 +2,179 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda Sarah</title>
-  
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beranda Sarah - Keseruan Sarah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background-color: #fff0fa;
-    }
-
-    .kawaii-beranda {
-      position: relative;
-      background: linear-gradient(135deg, #ffe7f3, #fff0fa);
-      padding: 100px 20px;
-      border-radius: 30px;
-      text-align: center;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
-      margin: 40px;
-    }
-
-    .kawaii-beranda h2 {
-      font-size: 2.8em;
-      color: #ff69b4;
-      margin: 10px 0 20px 0;
-    }
-
-    .kawaii-beranda p {
       color: #555;
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      line-height: 1.8;
     }
 
-    .emoji-besar {
-      font-size: 64px;
-      animation: emojiBounce 5s infinite;
+    /* Navbar */
+    .navbar {
+      background: #ffdef0;
+      padding: 14px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(255, 182, 193, 0.5);
     }
 
-    .gif-sarah {
-      max-width: 220px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(255, 150, 200, 0.3);
-    }
-
-    .cta-button {
-      background-color: #ffb6d9;
-      color: white;
-      padding: 14px 32px;
-      border-radius: 40px;
-      font-size: 1.1em;
-      font-weight: bold;
+    .navbar a {
+      margin: 0 18px;
+      color: #d83b94;
+      font-weight: 700;
       text-decoration: none;
-      display: inline-block;
-      transition: 0.3s ease;
-      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+      font-size: 1.1em;
+      transition: color 0.3s;
     }
 
-    .cta-button:hover {
-      background-color: #ff75b9;
-      transform: scale(1.05);
+    .navbar a:hover {
+      color: #a6006d;
     }
 
-    @keyframes emojiBounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+    /* Section umum */
+    section {
+      padding: 80px 20px;
+      background-color: #fff9fc;
+      text-align: center;
+      border-radius: 30px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 12px 40px rgba(255, 192, 203, 0.2);
     }
 
-    .sticker {
-      position: absolute;
-      opacity: 0.6;
-      z-index: 1;
+    section h2 {
+      font-size: 2.6em;
+      color: #ff69b4;
+      margin-bottom: 20px;
+      user-select: none;
     }
 
-    .sticker.bear {
-      bottom: 0;
-      left: 20px;
-      width: 90px;
+    section p {
+      font-size: 1.15em;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      user-select: text;
     }
 
-    .sticker.stars {
-      top: 10px;
-      right: 30px;
-      width: 70px;
+    /* Galeri */
+    .galeri-grid {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
+    .galeri-grid img {
+      width: 180px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(255, 182, 193, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galeri-grid img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6);
+    }
+
+    /* Sosial media */
+    .sosmed {
+      list-style: none;
+      padding: 0;
+      font-size: 1.3em;
+      user-select: text;
+    }
+
+    .sosmed li {
+      margin: 14px 0;
+    }
+
+    .sosmed a {
+      color: #ff69b4;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .sosmed a:hover {
+      color: #d83b94;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      .emoji-besar {
-        font-size: 48px;
+      section {
+        margin: 25px 15px;
+        padding: 60px 15px;
       }
-      .kawaii-beranda h2 {
+      section h2 {
         font-size: 2em;
       }
-      .cta-button {
-        padding: 12px 24px;
+      .galeri-grid img {
+        width: 140px;
+      }
+      .navbar a {
+        margin: 0 10px;
         font-size: 1em;
-      }
-      .kawaii-beranda {
-        margin: 20px;
-      }
-      .gif-sarah {
-        max-width: 160px;
       }
     }
   </style>
 </head>
 <body>
 
-  <section id="beranda" class="kawaii-beranda">
-    <!-- Stiker hiasan -->
-    <img src="minnie_mouse.gif" alt="bear" class="sticker bear" />
-    <img src="pita.png" alt="stars" class="sticker stars" />
+  <!-- Navigasi -->
+  <nav class="navbar">
+    <a href="beranda.html">🏠 Beranda</a>
+    <a href="#tentang">💖 Tentang</a>
+    <a href="#galeri">📷 Galeri</a>
+    <a href="#kontak">📩 Kontak</a>
+  </nav>
 
-    <!-- GIF Sarah -->
-    <img src="https://media.tenor.com/jLrSDpV0ADoAAAAC/kawaii-anime.gif" alt="Sarah GIF" class="gif-sarah" />
+  <!-- Tentang Sarah -->
+  <section id="tentang">
+    <h2>🌼 Tentang Sarah 🌼</h2>
+    <p>Sarah adalah perempuan yang lembut sekaligus kuat, meski sering kali tak menyadari kekuatan yang ada dalam dirinya. Ia berpikir dengan hati, mencintai dengan jiwa, dan bertahan dengan diam. Sarah bukanlah sosok yang mudah membuka diri, namun sekali ia percaya dan mencintai, ia memberikan seluruh dirinya doa, pengharapan, dan waktu.
 
-    <!-- Konten utama -->
-    <div class="emoji-besar">🌸🧁💫</div>
-    <h2>Selamat Datang di Dunia Milik Sarah!</h2>
-    <p>Hai teman-teman! 💕 Yuk ikuti keseruan Sarah yang penuh warna, ceria, dan momen sehari-hari. Jangan sampai ketinggalan ya! 🎀</p>
-    <a href="index.html" class="cta-button">✨ Lihat Keseruan ✨</a>
+      Masa lalunya dipenuhi oleh luka yang ia rawat sendiri. Ia mencoba mencintai orang-orang yang datang, bahkan ketika mereka tak selalu menetap. Sarah tidak membenci kepergian, ia hanya takut kehilangan arah saat kenyamanan berubah menjadi hampa. Ia terbiasa menyembunyikan air mata di balik senyuman, dan menyimpan kerinduan di balik kata-kata sederhana.
+      
+      Namun, yang paling unik dari Sarah adalah caranya mencintai. Ia tidak mencintai karena butuh, tapi karena ia yakin bahwa cinta adalah rumah dan ia selalu ingin menjadi rumah bagi seseorang, walau ia sendiri belum tahu, siapa yang benar-benar akan tinggal.
+    
+      Kisah cinta Sarah dimulai dengan seorang lelaki yang membentuk hatinya dengan luka. Cinta pertama yang memberinya harapan, namun juga mengajarkannya bahwa tidak semua yang kita jaga, akan tinggal. Sarah belajar untuk memaafkan, namun tidak melupakan. Ia terus melangkah, bahkan ketika bayangan masa lalu terus mengikutinya dari belakang.
+
+      Di tengah upayanya bangkit, hadir sosok baru yang membuatnya merasa dilihat, dicintai tanpa syarat. Lelaki yang datang seperti pelipur lara, tapi juga membawa dilema apakah hati yang belum pulih bisa benar-benar terbuka? Sarah mencoba percaya kembali, namun hatinya masih menoleh ke belakang, mencari seseorang yang telah jauh.
+      
+      Dalam perjalanan itu, ia menemukan orang-orang yang membuatnya bertanya "Siapa yang benar-benar mencintainya, dan siapa yang hanya datang karena kesepian?" Sarah mulai menulis ulang takdir cintanya, tidak dengan siapa ia akhirnya bersama, tetapi bagaimana ia berdamai dengan dirinya sendiri.
+      
+      Pertemuan, perpisahan, kerinduan, dan pengharapan semua menjalin benang merah dalam hidup Sarah. Sampai akhirnya ia menyadari bahwa yang ia butuhkan bukan lelaki yang membuat jantungnya berdebar, tapi seseorang yang tetap tinggal saat seluruh dunia hening. Namun Sarah memilih untuk mencintai dirinya sendiri sebelum seseorang bisa memenangkan tantangan yang sarah berikan.💖👑🍷</p>
+  </section>
+
+  <!-- Galeri Keseruan -->
+  <section id="galeri">
+    <h2>📸 Galeri Keseruan 📸</h2>
+    <div class="galeri-grid">
+      <img src="sarah1.jpg" alt="Sarah 1" />
+      <img src="sarah2.jpg" alt="Sarah 2" />
+      <img src="sarah3.jpg" alt="Sarah 3" />
+    </div>
+  </section>
+
+  <!-- Kontak Sosial Media -->
+  <section id="kontak">
+    <h2>💌 Yuk Terhubung! 💌</h2>
+    <p>Follow Sarah di media sosial dan jangan ragu untuk kontak ya!</p>
+    <ul class="sosmed">
+      <li><a href="https://www.instagram.com/syssara.nt?" target="_blank" rel="noopener">📷 Instagram</a></li>
+      <li><a href="https://www.tiktok.com/@meldynita_?_t=ZS-8wQpEXL940Q&_r=1" target="_blank" rel="noopener">🎵 TikTok</a></li>
+      <li><a href="anitasysasa@gmail.com">📧 Email</a></li>
+    </ul>
   </section>
 
 </body>
