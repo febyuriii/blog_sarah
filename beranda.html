@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda Sarah</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0fa;
+    }
+
+    .kawaii-beranda {
+      position: relative;
+      background: linear-gradient(135deg, #ffe7f3, #fff0fa);
+      padding: 100px 20px;
+      border-radius: 30px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+      margin: 40px;
+    }
+
+    .kawaii-beranda h2 {
+      font-size: 2.8em;
+      color: #ff69b4;
+      margin: 10px 0 20px 0;
+    }
+
+    .kawaii-beranda p {
+      color: #555;
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+    }
+
+    .emoji-besar {
+      font-size: 64px;
+      animation: emojiBounce 5s infinite;
+    }
+
+    .gif-sarah {
+      max-width: 220px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(255, 150, 200, 0.3);
+    }
+
+    .cta-button {
+      background-color: #ffb6d9;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+    }
+
+    .cta-button:hover {
+      background-color: #ff75b9;
+      transform: scale(1.05);
+    }
+
+    @keyframes emojiBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .sticker {
+      position: absolute;
+      opacity: 0.6;
+      z-index: 1;
+    }
+
+    .sticker.bear {
+      bottom: 0;
+      left: 20px;
+      width: 90px;
+    }
+
+    .sticker.stars {
+      top: 10px;
+      right: 30px;
+      width: 70px;
+    }
+
+    @media (max-width: 600px) {
+      .emoji-besar {
+        font-size: 48px;
+      }
+      .kawaii-beranda h2 {
+        font-size: 2em;
+      }
+      .cta-button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+      .kawaii-beranda {
+        margin: 20px;
+      }
+      .gif-sarah {
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="beranda" class="kawaii-beranda">
+    <!-- Stiker hiasan -->
+    <img src="minnie_mouse.gif" alt="bear" class="sticker bear" />
+    <img src="pita.png" alt="stars" class="sticker stars" />
+
+    <!-- GIF Sarah -->
+    <img src="https://media.tenor.com/jLrSDpV0ADoAAAAC/kawaii-anime.gif" alt="Sarah GIF" class="gif-sarah" />
+
+    <!-- Konten utama -->
+    <div class="emoji-besar">🌸🧁💫</div>
+    <h2>Selamat Datang di Dunia Milik Sarah!</h2>
+    <p>Hai teman-teman! 💕 Yuk ikuti keseruan Sarah yang penuh warna, ceria, dan momen sehari-hari. Jangan sampai ketinggalan ya! 🎀</p>
+    <a href="index.html" class="cta-button">✨ Lihat Keseruan ✨</a>
+  </section>
+
+</body>
+</html>
